@@ -1,0 +1,37 @@
+
+<div [ngStyle]="{
+  margin: '0px auto',
+  width: '300px',
+  textAlign: 'center',
+}">
+<p appBackGroundColor>CHANGE BACKGROUND COLOR TEST , CLICK ME</p>
+<p appBackGroundColor>ANOTHER TEST, CLICK ME TOO</p>
+</div>
+
+
+<div [ngStyle]="{ 
+    margin : '0px auto',
+    width : '300px',
+    color : 'blue',
+    
+ }">
+<ng-container *ngIf="isVisible">
+  <div appHideClick>
+    <p>DOBLE CLICK TO HIDE</p>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isVisible">
+  <div appHideClick>
+    <p>DOBLE CLICK TO HIDE</p>
+  </div>
+</ng-container>
+</div>
+
+<div appClkCntr>
+  <p>CLICK ME \ CLICK COUNTER</p>
+</div>
+
+<div appClkCntr>
+  <p>ANTOTHER CLICK COUNTER</p>
+</div>

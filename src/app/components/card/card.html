@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="person">
+        <h1 class="name"  id="name">{{cardName}}</h1>
+        <p class="age" id="age">{{cardAge}}</p>
+        <p class="job" id="job">{{cardJob}}</p>
+    </div>
+    <div class="dis">
+        <p>Чтобы импортировать компонент в Angular, сначала убедитесь, 
+            что он помечен как standalone: true в декораторе @Component или добавьте его
+             в массив declarations или imports вашего модуля (NgModule). 
+             Для standalone-компонентов добавьте их в массив imports при вызове
+             bootstrapApplication или provideRouter для корневого приложения или маршрута. </p>
+    </div>
+</div>
+<div class="placeholder">
+    <input type="text" [(ngModel)]="username" placeholder="enter a name">
+    <input type="text" [(ngModel)]="age" placeholder="enter an age">
+    <input type="text" [(ngModel)]="job" placeholder="enter an job">
+    <button (click)="savePerson()">Save</button>
+</div>

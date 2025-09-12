@@ -1,0 +1,54 @@
+:host{
+   justify-content: center;
+}
+.card{
+    max-width: 40%;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person{
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.dis{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-width: 40vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.card{
+    border: 5px solid black;
+    border-color: black;
+    min-width:  60vw;
+    margin-top: 10vh;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.placeholder{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20vw;
+}
+.placeholder {
+  display: flex;            /* делаем flex-контейнером */
+  flex-direction: column;   /* чтобы элементы шли вертикально */
+  align-items: center;      /* центрируем по горизонтали */
+  gap: 1rem;                /* расстояние между input и кнопкой */
+  margin-top: 2vh;          /* отступ сверху */
+}
+
+input::placeholder {
+  color: #888;        /* цвет текста плейсхолдера */
+  text-align: center; /* выравнивание по центру */
+  font-size: 1rem;    /* размер шрифта */
+}

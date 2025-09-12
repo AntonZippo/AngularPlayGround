@@ -1,0 +1,16 @@
+<div class="res">
+    <p>Your result : {{one}} / {{two}} </p>
+</div>
+
+
+<div class="wl" [ngStyle]="{
+        'border-color': result === 7 ? 'green' : 'red'
+    }" >
+    <p [ngStyle]="{
+        'color' : result === 7 ? 'green' : 'red'
+    }">{{message}}</p>
+    <div class="rol">
+        <p (click)="goRoll()">Roll!</p>
+    </div>
+</div>
+<app-history [one]="one" [two]="two" [rolls]="rolls"></app-history>

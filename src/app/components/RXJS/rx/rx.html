@@ -1,0 +1,19 @@
+<!-- <p>Секунды: {{ timer$ | async }}</p> -->
+
+<div [ngStyle]="{
+margin : '0px auto',
+width : '400px',
+textAlign : 'center'
+}">
+<h2>Данные</h2>
+</div>
+
+<div [ngStyle]="{
+  margin: '0px auto',
+  'margin-bottom': '20px',
+  width: '400px'
+}">
+<li *ngFor="let todo of (data$ | async)">
+  {{ todo.id }} - {{ todo.title}}
+</li>
+</div>

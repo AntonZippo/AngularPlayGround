@@ -1,0 +1,39 @@
+
+
+<div [ngStyle]="{
+margin : '0px auto',
+width : '400px',
+textAlign : 'center',
+border: '1px solid black',
+'border-radius' : '20px'
+}">
+<p>rx-btn works!</p>
+<button #btn [ngStyle]="{ 'margin-bottom': '10px' }">Click me to get random ID</button>
+<div *ngIf="data$ | async as data">
+<p> UserId : {{data.userId}}</p>
+<p> Id : {{data.id}}</p>
+<p> Title : {{data.title}}</p>
+<p> Completed : {{data.completed}}</p>
+</div>
+
+</div>
+
+<div [ngStyle]="{
+margin : '10px auto',
+width : '400px',
+textAlign : 'center',
+border: '1px solid black',
+'border-radius' : '20px'
+}">
+
+<button #getBtn >Get ID with counter!</button>
+<button #incBtn (click)="increment()">+1</button>
+<button #decBtn (click)="decrement()">-1</button>
+<h3>Counter : {{counter}}</h3>
+<div *ngIf="dataCntr$ | async as dataCntr">
+<p> UserId : {{dataCntr.userId}}</p>
+<strong> Id : {{dataCntr.id}}</strong>
+<p> Title : {{dataCntr.title}}</p>
+<p> Completed : {{dataCntr.completed}}</p>
+</div>
+</div>

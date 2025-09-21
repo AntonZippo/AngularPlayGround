@@ -1,0 +1,6 @@
+
+    <h3>Local (self): {{ localCounter.value$ | async }}</h3>
+    <h3>Global (skipSelf): {{ globalCounter.value$ | async }}</h3>
+
+    <button (click)="localCounter.increment()">+ Local</button>
+    <button (click)="globalCounter.increment()">+ Global</button>

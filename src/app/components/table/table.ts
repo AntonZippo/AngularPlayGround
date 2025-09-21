@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { History } from '../history/history';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   standalone : true,
   imports: [CommonModule,History],
   templateUrl: './table.html',
-  styleUrl: './table.scss'
+  styleUrl: './table.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Table {
     public message : string = "Test Your Luck!";

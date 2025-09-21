@@ -2,11 +2,15 @@ import { Component, OnInit ,ViewChild , ElementRef} from '@angular/core';
 import { of , Observable, map, interval, take, fromEvent } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
+
 @Component({
   selector: 'app-rx-btn',
   imports: [CommonModule],
   templateUrl: './rx-btn.html',
-  styleUrl: './rx-btn.scss'
+  styleUrl: './rx-btn.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RxBtn implements OnInit{
 private id : number = 0;
@@ -14,7 +18,8 @@ private click$ = fromEvent(document, 'click');
 public counter : number = 0;
 data$! : Observable<any>;
 dataCntr$! : Observable<any>;
-constructor(private http : HttpClient){}
+
+constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
 @ViewChild('btn', { static: true }) btn!: ElementRef<HTMLButtonElement>;
 @ViewChild('incBtn',{static : true}) incBtn! : ElementRef<HTMLButtonElement>;
@@ -34,10 +39,12 @@ this.fethcCntrId()
 fethcId(){
 this.id = Math.floor(Math.random() * 200 );
  this.data$ = this.http.get(`https://jsonplaceholder.typicode.com/todos/${this.id}`)
+ this.cdr.markForCheck();
 }
 fethcCntrId(){
 this.id = Math.floor(Math.random() * 200 );
  this.dataCntr$ = this.http.get(`https://jsonplaceholder.typicode.com/todos/${this.counter}`)
+ this.cdr.markForCheck();
 }
 
 increment(){

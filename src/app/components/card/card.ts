@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-card',
   imports: [FormsModule],
   templateUrl: './card.html',
-  styleUrl: './card.scss'
+  styleUrl: './card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
   username : string = '';

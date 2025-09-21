@@ -4,12 +4,14 @@ import { NgStyle } from '@angular/common';
 import { HideClick } from '../../../directives/clickNhide/hide-click';
 import { NgIf } from '@angular/common';
 import { ClkCntr } from '../../../directives/clickCounter/clk-cntr';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-dir-check',
   imports: [BackGroundColor,NgStyle,HideClick,NgIf,ClkCntr],
   templateUrl: './dir-check.html',
-  styleUrl: './dir-check.scss'
+  styleUrl: './dir-check.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DirCheck {
   isVisible = true;

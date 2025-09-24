@@ -14,6 +14,7 @@ textAlign : 'center'
   width: '400px'
 }">
 <li *ngFor="let todo of (data$ | async)">
-  {{ todo.id }} - {{ todo.title}}
+ <a [routerLink]="['/todo', todo.id]">{{ todo.id }} - {{ todo.title }}
+</a>
 </li>
 </div>

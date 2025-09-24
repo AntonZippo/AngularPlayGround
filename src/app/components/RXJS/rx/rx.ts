@@ -3,10 +3,11 @@ import { of , Observable, map, interval, take } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-rx',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './rx.html',
   styleUrl: './rx.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

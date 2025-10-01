@@ -1,0 +1,79 @@
+
+<form [formGroup]="myForm" (ngSubmit)="submitForm()"> 
+
+    <div class="forma">
+        <div class="fieldNames">
+
+        <label>Email :</label>
+        
+        <label>UserName :</label>
+
+        <label>Birth Date 'yyyy-mm-dd':</label>
+        <label>Password :</label>
+
+        <label>Confirm Password : </label>
+        <label>Hobbies :</label>
+        </div>
+
+        <div class="fields">
+
+        <div class="emailField">
+        <input formControlName="email">
+          @if (myForm.controls['email'].invalid && myForm.controls['email'].touched){
+          <div class="error">
+            <p>invalid Email</p>
+          </div>
+        }
+        </div>
+        <div class="emailField">
+        <input formControlName="username">
+          @if (myForm.controls['username'].invalid && myForm.controls['username'].touched){
+          <div class="error">
+            <p>invalid Name</p>
+          </div>
+        }
+        </div>
+
+        <div class="emailField">
+        <input formControlName="birthdate">
+          @if (myForm.controls['birthdate'].invalid && myForm.controls['birthdate'].touched){
+          <div class="error">
+            <p>invalid Date</p>
+          </div>
+        }
+        </div>
+
+        <div class="emailField">
+        <input formControlName="password">
+          @if (myForm.controls['password'].errors?.['invalidPass']&&
+          myForm.controls['password'].touched){
+          <div class="error">
+           <p>{{ myForm.controls['password'].errors?.['invalidPass'] }}</p>
+          </div>
+        }
+        </div>
+        
+       <div class="emailField">
+        <input formControlName="confirmPassword">
+          @if (myForm.errors?.['mismatchPasswords'] && myForm.controls['confirmPassword'].touched){
+          <div class="error">
+            <p>Passwords Don't match</p>
+          </div>
+        }
+        </div>
+
+        <input formControlName="hobbies">
+        </div>
+
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p>Email :{{myForm.value.email}}</p>
+<p>UserName :{{myForm.value.username}}</p>
+<p>Birth Date :{{myForm.value.birthdate}}</p>
+<p>Hobbies :{{myForm.value.hobbies}}</p>
+
+
+

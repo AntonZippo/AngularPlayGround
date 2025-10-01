@@ -11,10 +11,11 @@ import { MixedCounter } from './components/counterService/mixed-counter/mixed-co
 import { AnalyticsComponent } from './components/counterService/analytics-component/analytics-component';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
+import { Forms } from './components/forms/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [ItemComponent,CardComponent,Table,DirCheck,Rx,RxBtn,Counter,LocalCounter,MixedCounter,AnalyticsComponent,RouterOutlet,RouterLink],
+  imports: [ItemComponent,CardComponent,Table,DirCheck,Rx,RxBtn,Counter,LocalCounter,MixedCounter,AnalyticsComponent,RouterOutlet,RouterLink, Forms],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

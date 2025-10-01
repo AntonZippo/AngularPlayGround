@@ -66,14 +66,39 @@
         </div>
 
     </div>
-
+    <div class="hBtn">
+    <button type="button" class="HobbyBtn" (click)="addHobby()">Add</button>
+    <button type="button" class="HobbyBtn" (click)="deleteHobby()" [disabled]="hobbyArr.length < 1">Delete</button>
+    </div>
+   <div class="hobbies">
+    @for (item of hobbyArr; track $index) {
+      <span>{{item}}</span>
+    }
+  
+   </div>
     <button type="submit">Submit</button>
 </form>
 
-<p>Email :{{myForm.value.email}}</p>
-<p>UserName :{{myForm.value.username}}</p>
-<p>Birth Date :{{myForm.value.birthdate}}</p>
-<p>Hobbies :{{myForm.value.hobbies}}</p>
 
 
+<div class="forms">
+  @for (User of submittedData; track $index) {
+    <div class="SavedForm">
+ <h3>Анкета {{($index+1)}}</h3>
+ <p>Name : {{User.username}}</p>
+ <p>Birth date : {{User.birthdate}}</p>
+ <p>Email : {{User.email}}</p>
+ <p>Hobbies : {{User.hobbies}}</p>
+ <p></p>
+    </div>
 
+}
+</div>
+
+<!-- export interface UserForm{
+  username : string;
+  birthdate : string;
+  password : string;
+  confirmPassword : string
+  hobbies : string;
+} -->

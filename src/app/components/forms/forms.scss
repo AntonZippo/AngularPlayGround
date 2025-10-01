@@ -1,15 +1,16 @@
 form{
     display: flex;
     flex-direction: column;
-    min-width: 30vw;
+    min-width: 250px;
+    max-width: 400px;
     min-height: 30vh;
     margin: 0 auto;
     label{
         margin: 10px;
     }
     button{
-        width: 5%;
-        height: 30px;
+        width: 20%;
+        height: 35px;
         display: block;
         margin: auto;
         margin-top: 15px;
@@ -21,6 +22,8 @@ form{
         color: white;
         animation: shine 5s infinite;
         transition: transform 0.3s ease;
+        font-size: 18px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     button:hover{
         transform: scale(1.2);
@@ -74,3 +77,68 @@ input.ng-invalid.ng-touched {
   margin-left: 10px;
 }
 
+.hBtn button.HobbyBtn{
+  width: 20%;
+  height: 25px;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgb(74, 33, 121), rgb(0, 102, 255), rgb(74, 33, 121));
+  background-size: 200% 100%;
+  color: white;
+  animation: shine 5s infinite;
+  transition: transform 0.1s ease;
+  font-size: 17px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+  }
+  .hBtn button.HobbyBtn:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+  }
+
+  .hBtn button.HobbyBtn:disabled{
+    display: none;
+  }
+
+  .hBtn{
+    display: flex;
+    justify-content:flex-end;
+    width: 20vw;
+    margin: auto;
+  }
+  .hobbies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 5px;
+    span{
+    border: 1px solid black;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    background-color: rgb(70, 4, 64);
+    color: rgb(235, 227, 227);
+    font-size: 19px;
+    }
+    
+  }
+
+.SavedForm{
+  margin: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.forms{
+  display: flex;
+  flex-wrap: wrap;
+}
+  
